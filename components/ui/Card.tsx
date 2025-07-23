@@ -16,14 +16,14 @@ const Card: React.FC<cardProps> = ({ content }) => {
           className="object-cover z-0 rounded-xl"
         />
         {content.popular && (
-          <div className="absolute z-50 top-3 left-3 font-semibold text-background max-md:text-small px-4 py-1 max-md:px-2 max-md:py-1 text-label rounded-full bg-popular">
+          <div className="absolute z-50 top-2 left-2 font-medium text-small text-background max-md:text-small px-3 py-1 max-md:px-2 max-md:py-1 rounded-full bg-popular">
             popular
           </div>
         )}
       </div>
       <section className="flex justify-between items-center">
         <h2>{content.name}</h2>
-        <span className="bg-price font-bold text-price-size px-3 py-1.5 rounded-lg text-background">
+        <span className="bg-price font-bold text-price-size px-2 rounded-sm text-background">
           {content.price}
         </span>
       </section>
@@ -46,15 +46,17 @@ const Card: React.FC<cardProps> = ({ content }) => {
               className="object-cover"
             />
           )}
-          <h4 className="font-bold text-foreground">
-            {content.rating}
-            <span className="text-paragraph font-light">
+          <h4 className="font-medium text-foreground">
+            {Number.isInteger(content.rating)
+              ? content.rating.toFixed(1)
+              : content.rating}{" "}
+            <span className="text-[#4D5562] font-light ">
               {content.votes > 0 ? `(${content.votes} votes)` : `No ratings`}
             </span>
           </h4>
         </div>
         {content.available === false && (
-          <h3 className="text-warning text-label">Sold Out</h3>
+          <h3 className="text-warning text-label font-medium">Sold Out</h3>
         )}
       </section>
     </article>
