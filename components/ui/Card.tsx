@@ -23,7 +23,7 @@ const Card: React.FC<cardProps> = ({ content }) => {
       </div>
       <section className="flex justify-between items-center">
         <h2>{content.name}</h2>
-        <span className="bg-price font-bold text-price-size px-2 rounded-sm text-background">
+        <span className="bg-price font-bold text-price-size px-2 py-1 rounded-sm text-background">
           {content.price}
         </span>
       </section>

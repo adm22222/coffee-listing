@@ -21,7 +21,7 @@ const ProductPanel = () => {
       : data;
 
   return (
-    <main className="-mt-55 mb-20 relative min-h-screen grid grid-cols-12 gap-4 p-10 max-md:p-5">
+    <main className="-mt-55 relative min-h-screen grid grid-cols-12 gap-4 p-10 max-md:p-5">
       <div className=" z-10 col-span-12 mt-10 md:col-start-2 md:col-span-10 bg-default p-10 max-md:p-5  overflow-hidden rounded-2xl text-white space-y-10">
         <section className="flex justify-between items-center flex-col mt-7 ">
           <div className="relative w-[50%] max-md:w-full flex justify-center flex-col gap-3 items-center">
